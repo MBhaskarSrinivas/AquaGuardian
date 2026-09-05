@@ -42,7 +42,7 @@ AquaGuardian: Smart Water Drinking Reminder System
         - The system keeps track of the number of glasses consumed by the user.
         - The LCD displays the current consumption status.
     4. Target Glass Configuration
-        - The user can configure a target number of glasses using the keypad.
+        - The user can configure a target number of glasses using the dedicated interrupt button along with keypad.
     5. Remaining Glass Count
         - The system calculates the number of glasses remaining to reach the configured target.
     6. Missed Reminder Count
