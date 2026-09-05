@@ -12,10 +12,10 @@ AquaGuardian: Smart Water Drinking Reminder System
     - Tracks the number of glasses consumed.
     - Tracks missed drinking opportunities.
     - Displays the current status clearly on an LCD.
-    - Provides a simple keypad-based user interface.
+    - Provides a simple keypad-based user interface for editing and also for configuring.
 
 -> Hardware Used:
-    - ARM7 - LPC21xx Microcontroller
+    - ARM7/LPC21xx - Microcontroller
     - 16×2 LCD
     - Matrix Keypad
     - Buzzer
