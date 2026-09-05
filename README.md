@@ -107,6 +107,11 @@ AquaGuardian: Smart Water Drinking Reminder System
     - External interrupt handling
     - Modular embedded software development.
 
-->  Project:
+->  Future Improvements:
+    - Pre-reminder notification
+    - More robust remainder scheduling.
+    - daily statistics and automatic daily reset.
+    - Improved power management.
+    - Additional user friendly settings.
     - AquaGuardian: Smart Water Drinking Reminder System
     - Developed as an embedded systems project using ARM7/LPC21xx.
