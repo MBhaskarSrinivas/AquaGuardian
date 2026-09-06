@@ -1,11 +1,11 @@
-AquaGuardian: Smart Water Drinking Reminder System
+**AquaGuardian: Smart Water Drinking Reminder System**
 
--> Project Overview:
+-> **Project Overview**:
     AquaGuardian is an embedded-based smart water drinking reminder system developed using an ARM7/LPC21xx microcontroller.
     The system helps the user maintain regular water-drinking habits by providing reminders at configured intervals. It uses an RTC to keep track of time and provides information to the user through an LCD display. A keypad is used for user interaction and configuration.
     The system also keeps track of the number of glasses consumed, remaining glasses, and missed reminders.
 
--> Objective:
+-> **Objective**:
     The main objective of AquaGuardian is to develop a simple embedded system that:
     - Reminds the user to drink water at regular intervals.
     - Allows the user to configure water consumption targets.
@@ -14,7 +14,7 @@ AquaGuardian: Smart Water Drinking Reminder System
     - Displays the current status clearly on an LCD.
     - Provides a simple keypad-based user interface for editing and also for configuring.
 
--> Hardware Used:
+-> **Hardware Used**:
     - ARM7/LPC21xx - Microcontroller
     - 16×2 LCD
     - Matrix Keypad
@@ -22,11 +22,11 @@ AquaGuardian: Smart Water Drinking Reminder System
     - LEDs
     - Switchs
 
--> Software:
+-> **Software**:
     - Embedded C
     - ARM7/LPC21xx
 
--> Features:
+-> **Features**:
     1. RTC-Based Time Display
         The RTC provides:
         - Hours
@@ -57,7 +57,7 @@ AquaGuardian: Smart Water Drinking Reminder System
     8. External Interrupt
         - An external interrupt is used to enter the configuration/menu mode from the normal display operation.
 
-->LCD Information:
+-> **LCD Information**:
     During normal operation, the LCD provides information such as:
       - Current time
       - Date
@@ -68,13 +68,13 @@ AquaGuardian: Smart Water Drinking Reminder System
       - Remaining glasses
       - Missed reminders
 
--> "src":
+-> **src**:
     - Contains the C source files implementing the project functionality.
 
--> "include":
+-> **include**:
     - Contains the header files, declarations, macros, and project definitions used by the source files.
 
--> Main Modules:
+-> **Main Modules**:
     Module - Purpose
     - "project_main.c"| Main program entry point and initialization
     - "display_mode.c"| Normal LCD display and reminder checking
@@ -85,7 +85,7 @@ AquaGuardian: Smart Water Drinking Reminder System
     - "Init_mode_isr.c"| Menu/configuration handling
     - "KPM.c"| Keypad scanning and numeric input.
 
--> Future Improvements:
+-> **Future Improvements**:
     Possible future improvements include:
     - User-configurable reminder duration.
     - Pre-reminder notification.
@@ -96,7 +96,7 @@ AquaGuardian: Smart Water Drinking Reminder System
     - Additional user settings.
     - Improved non-blocking interrupt/state-machine design.
 
--> Project Purpose:
+-> **Project Purpose**:
     This project was developed as an embedded systems project to practice and demonstrate:
     - Embedded C programming
     - ARM7/LPC21xx microcontroller programming
@@ -107,7 +107,19 @@ AquaGuardian: Smart Water Drinking Reminder System
     - External interrupt handling
     - Modular embedded software development.
 
-->  Future Improvements:
+-> **Main Module**:
+    |**Module**|**Purpose**|
+    |----------|-----------|
+    |project_main|Main program entry point and initialization|
+    |display_mode.c|Normal LCD display and reminder checking|
+    |remainder.c|Water reminder and drink/missed handling and updating accordingly|
+    |Init_RTC.c| RTC initialization|
+    |Init_block.c|GPIO/output initialization|
+    |Init_int.c|External interrupt initialization|
+    |Init_mode_isr.c|Interrupt handler such as Menu/configuration/editing|
+    |KPM.c|Keypad scanning and numeric input|
+
+-> **Future Improvements**:
     - Pre-reminder notification
     - More robust remainder scheduling.
     - daily statistics and automatic daily reset.
