@@ -110,13 +110,21 @@
 -> **Main Module**:
     |**Module**|**Purpose**|
     |----------|-----------|
+    
     |`project_main`|Main program entry point and initialization|
+    
     |`display_mode.c`|Normal LCD display and reminder checking|
+    
     |`remainder.c`|Water reminder and drink/missed handling and updating accordingly|
+    
     |`Init_RTC.c`| RTC initialization|
+    
     |`Init_block.c`|GPIO/output initialization|
+    
     |`Init_int.c`|External interrupt initialization|
+    
     |`Init_mode_isr.c`|Interrupt handler such as Menu/configuration/editing|
+    
     |`KPM.c`|Keypad scanning and numeric input|
 
 -> **Future Improvements**:
