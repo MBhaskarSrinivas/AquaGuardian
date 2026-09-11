@@ -162,6 +162,121 @@ Information| Purpose|
 10. The keypad and external interrupt provide access to the configuration/menu interface.
 
 ---
+---
+**🧱 Software Modules**
+
+Module| Responsibility |
+|---|---|
+|"project_main.c"| System initialization and main program loop|
+|"display_mode.c"| Main LCD display and reminder monitoring|
+|"remainder.c"| Reminder handling and water-intake/missed tracking|
+|"Init_RTC.c"| LPC21xx RTC initialization|
+|"Init_block.c"| GPIO direction initialization|
+|"Init_int.c"| External interrupt configuration|
+|"Init_mode_isr.c"| Menu and configuration handling|
+|"KPM.c"| Keypad scanning and numeric input|
+|"lcd.h" / LCD files| LCD interface and display operations|
+|"project.h" / "project_defines.h"| Project declarations and hardware definitions|
+
+---
+
+**🛠️ Technologies Used**
+
+|Category| Technology |
+|---|---|
+|Microcontroller| ARM7 / LPC21xx|
+|Programming Language| Embedded C|
+|Development| Embedded C toolchain|
+|Simulation| Proteus|
+|Display| 16×2 LCD|
+|Input| 4×4 Matrix Keypad|
+|Time Management| LPC21xx Internal RTC|
+|Interrupt| External Interrupt (EINT0)|
+|Indicators| Buzzer + LEDs|
+|Water Detection| Push Button / Switch|
+
+---
+
+**📊 Project Demonstration**
+
+The project demonstration includes:
+
+- RTC time and date display
+- Water reminder generation
+- Water intake detection
+- Target configuration
+- Taken/remaining water tracking
+- Missed reminder tracking
+- Completion percentage
+- Keypad-based interaction
+- External interrupt-based menu access
+- Buzzer and LED indications
+
+Detailed demonstration images will be added to the "docs/output/" directory.
+
+---
+
+**📷 Project Documentation**
+
+Block Diagram
+
+The system block diagram showing the relationship between the LPC21xx controller, RTC, keypad, LCD, buttons, buzzer and LEDs will be available here:
+
+"docs/block-diagram.png"
+
+Circuit Diagram
+
+The Proteus circuit diagram showing the actual controller pin connections and peripherals will be available here:
+
+"docs/circuit-diagram.png"
+
+Output Screens
+
+Project output photographs and LCD display states will be added under:
+
+"docs/output/"
+
+---
+
+**🚀 Future Improvements**
+
+The current project can be extended with:
+
+- Fully configurable reminder duration
+- Optional pre-reminder notification
+- More robust reminder scheduling
+- Daily statistics and reset functionality
+- Additional user-configurable parameters
+- Non-blocking program architecture
+- Power-saving features
+
+---
+
+**🎓 Learning Outcomes**
+
+This project provided practical experience with:
+
+- ARM7/LPC21xx microcontroller programming
+- Embedded C
+- GPIO configuration
+- RTC programming
+- LCD interfacing
+- Matrix keypad interfacing
+- External interrupt handling
+- Buzzer and LED control
+- User-input processing
+- Modular embedded software development
+- Hardware/software integration
+- Proteus-based embedded-system simulation
+
+---
+
+**👨‍💻 Project Purpose**
+
+AquaGuardian was developed as an embedded-systems project to demonstrate the integration of multiple microcontroller peripherals into a practical real-world application.
+
+The project combines time management, user interaction, input detection, notification mechanisms and data tracking into a single ARM7-based embedded system.
+
 
 **## 🧩 Block Diagram**
 
@@ -207,4 +322,3 @@ Information| Purpose|
       │ Missed       │
       │ Completion % │
       └──────────────┘
----
