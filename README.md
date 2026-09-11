@@ -206,4 +206,5 @@ Information| Purpose|
       │ Remaining    │                     └──────────────┘
       │ Missed       │
       │ Completion % │
-      └──────────────┘'''
+      └──────────────┘
+---
