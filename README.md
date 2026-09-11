@@ -1,6 +1,6 @@
 AquaGuardian: Smart Water Drinking Reminder System
 
-📌 Project Overview
+*📌 Project Overview*
 
 AquaGuardian is an embedded-based smart water drinking reminder system developed using an ARM7/LPC21xx microcontroller.
 
@@ -10,7 +10,7 @@ The system also keeps track of the number of glasses consumed, remaining glasses
 
 ---
 
-🎯 Objective
+*🎯 Objective*
 
 The main objective of AquaGuardian is to develop a simple embedded system that:
 
