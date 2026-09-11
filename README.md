@@ -1,10 +1,10 @@
-AquaGuardian: Smart Water Drinking Reminder System
+**AquaGuardian: Smart Water Drinking Reminder System**
 
-📌 Overview
+**📌 Overview**
 
 AquaGuardian is an ARM7/LPC21xx-based embedded system designed to remind users to drink water at regular intervals and track daily water intake.
 
-The system uses the LPC21xx internal RTC to maintain time, a 16×2 LCD for displaying information, a 4×4 matrix keypad for user configuration, and a drink-detection switch to record water intake.
+The system uses the LPC21xx internal RTC to maintain time, a 16×2 LCD for displaying information, a 4×4 matrix keypad for user configuration, and a drink-detection switch to record water intake by using LEDs confirmation.
 
 The system keeps track of the user's:
 
@@ -16,7 +16,7 @@ The system keeps track of the user's:
 
 ---
 
-🎯 Objective
+**🎯 Objective**
 
 The main objective of AquaGuardian is to develop a simple embedded water reminder system that combines:
 
@@ -26,30 +26,31 @@ The main objective of AquaGuardian is to develop a simple embedded water reminde
 - Water intake detection
 - LCD-based status monitoring
 - Keypad-based user interaction
-- Visual and audible notifications
+- Visual with LEDs and audible using BUZZER notifications
 
 ---
 
-⚙️ Key Features
+**⚙️ Key Features**
 
-Feature| Description
-RTC Clock| Displays the current time and date using the LPC21xx internal RTC
-Water Reminder| Generates a reminder when the configured reminder time is reached
-Water Detection| Detects whether the user has taken water using a switch
-Target Setting| Allows the user to configure the required water target
-Intake Tracking| Maintains the amount of water consumed
-Remaining Count| Displays the remaining amount required to reach the target
-Missed Count| Records reminders that were not answered
-Percentage| Displays the percentage of the target completed
-Keypad Menu| Provides user interaction and configuration
-External Interrupt| Opens the configuration/menu interface
-LCD Display| Displays time, date, reminder and water statistics
-Buzzer| Provides an audible reminder
-LEDs| Indicates the status of water intake/reminder events
+| Feature | Description |
+|---|---|
+| RTC Clock | Displays the current time and date using the LPC21xx internal RTC |
+| Water Reminder | Generates a reminder when the configured reminder time is reached |
+| Water Detection | Detects whether the user has taken water using a switch |
+| Target Setting | Allows the user to configure the required water target |
+| Intake Tracking | Maintains the amount of water consumed |
+| Remaining Count | Displays the remaining amount required to reach the target |
+| Missed Count | Records reminders that were not answered |
+| Percentage | Displays the percentage of the target completed |
+| Keypad Menu | Provides user interaction and configuration |
+| External Interrupt | Opens the configuration/menu interface |
+| LCD Display | Displays time, date, reminder and water statistics |
+| Buzzer | Provides an audible reminder |
+| LEDs | Indicates the status of water intake/reminder events |
 
 ---
 
-🧩 System Architecture
+**🧩 System Architecture**
 
 The main controller of the system is the ARM7/LPC21xx microcontroller.
 
@@ -74,76 +75,80 @@ RTC → Reminder Check → User Notification → Drink Detection → Update Stat
 
 ---
 
-🔌 Hardware Connections
+**🔌 Hardware Connections**
 
-LCD Interface
+**LCD Interface**
 
 The 16×2 LCD uses an 8-bit data interface.
 
-LCD Signal| LPC21xx Connection
-D0| P0.8
-D1| P0.9
-D2| P0.10
-D3| P0.11
-D4| P0.12
-D5| P0.13
-D6| P0.14
-D7| P0.15
-RS| P0.16
-EN| P0.17
+| LCD Signal| LPC21xx Connection|
+|---|---|
+|D0| P0.8|
+|D1| P0.9|
+|D2| P0.10|
+|D3| P0.11|
+|D4| P0.12|
+|D5| P0.13|
+|D6| P0.14|
+|D7| P0.15|
+|RS| P0.16|
+|EN| P0.17|
 
 ---
 
-4×4 Matrix Keypad
+**4×4 Matrix Keypad**
 
 The keypad uses four row lines and four column lines.
 
-Keypad Signal| LPC21xx Connection
-Row 1| P1.16
-Row 2| P1.17
-Row 3| P1.18
-Row 4| P1.19
-Column 1| P1.20
-Column 2| P1.21
-Column 3| P1.22
-Column 4| P1.23
+|Keypad Signal| LPC21xx Connection|
+|---|---|
+|Row 1| P1.16|
+|Row 2| P1.17|
+|Row 3| P1.18|
+|Row 4| P1.19|
+|Column 1| P1.20|
+|Column 2| P1.21|
+|Column 3| P1.22|
+|Column 4| P1.23|
 
 ---
 
-Control and Indicator Connections
+**Control and Indicator Connections**
 
-Device| LPC21xx Pin| Function
-External Interrupt Button| P0.1| Opens the configuration/menu interface
-Drink Detection Button| P0.20| Detects water intake
-Buzzer| P0.21| Audible reminder
-Yellow LED| P0.4| Reminder/status indication
-Green LED| P0.22| Successful water intake indication
-Red LED| P0.23| Missed reminder indication
+|Device| LPC21xx Pin| Function |
+|---|---|---|
+|External Interrupt Button| P0.1| Opens the configuration/menu interface|
+|Drink Detection Button| P0.20| Detects water intake|
+|Buzzer| P0.21| Audible reminder|
+|Yellow LED| P0.4| Reminder/status indication|
+|Green LED| P0.22| Successful water intake indication|
+|Red LED| P0.23| Missed reminder indication|
 
 The external interrupt button and drink detection button are active-low inputs.
 
 ---
 
-🖥️ Display Information
+**🖥️ Display Information**
 
 The LCD is used to present both real-time information and water-drinking statistics.
 
 The system can display:
 
-Information| Purpose
-Time| Current RTC time
-Date| Current RTC date
-Day| Current day of the week
-Completion %| Percentage of target completed
-Taken| Quantity of water consumed
-Target| Configured water target
-Remaining| Quantity still required
-Missed| Number of missed reminders
-Reminder Message| Notification when it is time to drink water
+Information| Purpose|
+|---|---|
+|Time| Current RTC time|
+|Date| Current RTC date|
+|Day| Current day of the week|
+|Completion %| Percentage of target completed|
+|Taken| Quantity of water consumed|
+|Target| Configured water target|
+|Remaining| Quantity still required|
+|Missed| Number of missed reminders|
+|Reminder Message| Notification when it is time to drink water|
 
 ---
 
-🔄 Working Principle
+**🔄 Working Principle**
 
 1. The LPC21xx initializes the RTC, LCD, keypad, GPIO and external interrupt.
 2. The RTC continuously maintains the current time and date.
@@ -158,7 +163,7 @@ Reminder Message| Notification when it is time to drink water
 
 ---
 
-📁 Project Structure
+**📁 Project Structure**
 
 AquaGuardian/
 │
@@ -192,39 +197,41 @@ AquaGuardian/
 
 ---
 
-🧱 Software Modules
+**🧱 Software Modules**
 
-Module| Responsibility
-"project_main.c"| System initialization and main program loop
-"display_mode.c"| Main LCD display and reminder monitoring
-"remainder.c"| Reminder handling and water-intake/missed tracking
-"Init_RTC.c"| LPC21xx RTC initialization
-"Init_block.c"| GPIO direction initialization
-"Init_int.c"| External interrupt configuration
-"Init_mode_isr.c"| Menu and configuration handling
-"KPM.c"| Keypad scanning and numeric input
-"lcd.h" / LCD files| LCD interface and display operations
-"project.h" / "project_defines.h"| Project declarations and hardware definitions
-
----
-
-🛠️ Technologies Used
-
-Category| Technology
-Microcontroller| ARM7 / LPC21xx
-Programming Language| Embedded C
-Development| Embedded C toolchain
-Simulation| Proteus
-Display| 16×2 LCD
-Input| 4×4 Matrix Keypad
-Time Management| LPC21xx Internal RTC
-Interrupt| External Interrupt (EINT0)
-Indicators| Buzzer + LEDs
-Water Detection| Push Button / Switch
+Module| Responsibility |
+|---|---|
+|"project_main.c"| System initialization and main program loop|
+|"display_mode.c"| Main LCD display and reminder monitoring|
+|"remainder.c"| Reminder handling and water-intake/missed tracking|
+|"Init_RTC.c"| LPC21xx RTC initialization|
+|"Init_block.c"| GPIO direction initialization|
+|"Init_int.c"| External interrupt configuration|
+|"Init_mode_isr.c"| Menu and configuration handling|
+|"KPM.c"| Keypad scanning and numeric input|
+|"lcd.h" / LCD files| LCD interface and display operations|
+|"project.h" / "project_defines.h"| Project declarations and hardware definitions|
 
 ---
 
-📊 Project Demonstration
+**🛠️ Technologies Used**
+
+|Category| Technology |
+|---|---|
+|Microcontroller| ARM7 / LPC21xx|
+|Programming Language| Embedded C|
+|Development| Embedded C toolchain|
+|Simulation| Proteus|
+|Display| 16×2 LCD|
+|Input| 4×4 Matrix Keypad|
+|Time Management| LPC21xx Internal RTC|
+|Interrupt| External Interrupt (EINT0)|
+|Indicators| Buzzer + LEDs|
+|Water Detection| Push Button / Switch|
+
+---
+
+**📊 Project Demonstration**
 
 The project demonstration includes:
 
@@ -243,7 +250,7 @@ Detailed demonstration images will be added to the "docs/output/" directory.
 
 ---
 
-📷 Project Documentation
+**📷 Project Documentation**
 
 Block Diagram
 
@@ -265,24 +272,21 @@ Project output photographs and LCD display states will be added under:
 
 ---
 
-🚀 Future Improvements
+**🚀 Future Improvements**
 
 The current project can be extended with:
 
 - Fully configurable reminder duration
 - Optional pre-reminder notification
-- Improved menu navigation with back/skip options
 - More robust reminder scheduling
 - Daily statistics and reset functionality
 - Additional user-configurable parameters
 - Non-blocking program architecture
-- State-machine-based application design
-- Improved interrupt handling
 - Power-saving features
 
 ---
 
-🎓 Learning Outcomes
+**🎓 Learning Outcomes**
 
 This project provided practical experience with:
 
@@ -301,7 +305,7 @@ This project provided practical experience with:
 
 ---
 
-👨‍💻 Project Purpose
+**👨‍💻 Project Purpose**
 
 AquaGuardian was developed as an embedded-systems project to demonstrate the integration of multiple microcontroller peripherals into a practical real-world application.
 
