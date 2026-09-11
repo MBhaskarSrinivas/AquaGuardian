@@ -222,19 +222,14 @@ Block Diagram
 
 The system block diagram showing the relationship between the LPC21xx controller, RTC, keypad, LCD, buttons, buzzer and LEDs will be available here:
 
-"docs/block-diagram.png"
-
 Circuit Diagram
 
 The Proteus circuit diagram showing the actual controller pin connections and peripherals will be available here:
 
-"docs/circuit-diagram.png"
 
 Output Screens
 
 Project output photographs and LCD display states will be added under:
-
-"docs/output/"
 
 ---
 
