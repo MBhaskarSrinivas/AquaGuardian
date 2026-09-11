@@ -209,7 +209,6 @@ Information| Purpose|
       └──────────────┘
 '''
 ---
-
 **🧱 Software Modules**
 
 Module| Responsibility |
