@@ -1,6 +1,6 @@
 AquaGuardian: Smart Water Drinking Reminder System
 
-*📌 Project Overview*
+**📌 Project Overview**
 
 AquaGuardian is an embedded-based smart water drinking reminder system developed using an ARM7/LPC21xx microcontroller.
 
@@ -10,7 +10,7 @@ The system also keeps track of the number of glasses consumed, remaining glasses
 
 ---
 
-*🎯 Objective*
+**🎯 Objective**
 
 The main objective of AquaGuardian is to develop a simple embedded system that:
 
@@ -23,7 +23,7 @@ The main objective of AquaGuardian is to develop a simple embedded system that:
 
 ---
 
-⚙️ Hardware Used
+**⚙️ Hardware Used**
 
 - ARM7 / LPC21xx Microcontroller
 - RTC (Real-Time Clock)
@@ -36,7 +36,7 @@ The main objective of AquaGuardian is to develop a simple embedded system that:
 
 ---
 
-💻 Software
+**💻 Software**
 
 - Embedded C
 - ARM7/LPC21xx
@@ -48,7 +48,7 @@ The main objective of AquaGuardian is to develop a simple embedded system that:
 
 ---
 
-✨ Features
+**✨ Features**
 
 1. RTC-Based Time Display
 
@@ -102,7 +102,7 @@ An external interrupt is used to enter the configuration/menu mode from the norm
 
 ---
 
-🖥️ LCD Information
+**🖥️ LCD Information**
 
 During normal operation, the LCD provides information such as:
 
@@ -117,7 +117,7 @@ During normal operation, the LCD provides information such as:
 
 ---
 
-🔄 Basic Working
+**🔄 Basic Working**
 
 The basic operation of AquaGuardian is:
 
@@ -163,7 +163,7 @@ The basic operation of AquaGuardian is:
 
 ---
 
-📁 Project Structure
+**📁 Project Structure**
 
 AquaGuardian/
 │
@@ -199,21 +199,22 @@ Contains the header files, declarations, macros, and project definitions used by
 
 ---
 
-🔧 Main Modules
+**🔧 Main Modules**
 
-Module| Purpose
-"project_main.c"| Main program entry point and initialization
-"display_mode.c"| Normal LCD display and reminder checking
-"remainder.c"| Water reminder and drink/missed handling
-"Init_RTC.c"| RTC initialization
-"Init_block.c"| GPIO/output initialization
-"Init_int.c"| External interrupt initialization
-"Init_mode_isr.c"| Menu/configuration handling
-"KPM.c"| Keypad scanning and numeric input
+| Module | Purpose |
+|---|---|
+|"project_main.c"| Main program entry point and initialization|
+|"display_mode.c"| Normal LCD display and reminder checking|
+|"remainder.c"| Water reminder and drink/missed handling|
+|"Init_RTC.c"| RTC initialization|
+|"Init_block.c"| GPIO/output initialization|
+|"Init_int.c"| External interrupt initialization|
+|"Init_mode_isr.c"| Menu/configuration handling|
+|"KPM.c"| Keypad scanning and numeric input|
 
 ---
 
-🚀 Future Improvements
+**🚀 Future Improvements**
 
 Possible future improvements include:
 
@@ -224,11 +225,10 @@ Possible future improvements include:
 - Daily statistics and automatic daily reset.
 - Improved power management.
 - Additional user settings.
-- Improved non-blocking interrupt/state-machine design.
 
 ---
 
-📚 Project Purpose
+**📚 Project Purpose**
 
 This project was developed as an embedded systems project to practice and demonstrate:
 
@@ -243,7 +243,7 @@ This project was developed as an embedded systems project to practice and demons
 
 ---
 
-👨‍💻 Project
+**👨‍💻 Project**
 
 AquaGuardian: Smart Water Drinking Reminder System
 
