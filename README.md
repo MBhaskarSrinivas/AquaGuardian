@@ -206,8 +206,7 @@ Information| Purpose|
       │ Remaining    │                     └──────────────┘
       │ Missed       │
       │ Completion % │
-      └──────────────┘
-'''
+      └──────────────┘'''
 
 **🧱 Software Modules**
 
