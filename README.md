@@ -163,39 +163,51 @@ Information| Purpose|
 
 ---
 
-**📁 Project Structure**
+**## 🧩 Block Diagram**
 
-AquaGuardian/
-│
-├── src/
-│   ├── project_main.c
-│   ├── display_mode.c
-│   ├── remainder.c
-│   ├── Init_RTC.c
-│   ├── Init_block.c
-│   ├── Init_int.c
-│   ├── Init_mode_isr.c
-│   └── KPM.c
-│
-├── include/
-│   ├── types.h
-│   ├── project.h
-│   ├── project_defines.h
-│   ├── block.h
-│   ├── lcd.h
-│   ├── lcd_defines.h
-│   ├── KPM.h
-│   └── KPM_defines.h
-│
-├── docs/
-│   ├── block-diagram.png
-│   ├── circuit-diagram.png
-│   └── output/
-│       └── ...
-│
-└── README.md
-
----
+```
+                    ┌───────────────────────┐
+                    │    ARM7 / LPC21xx     │
+                    │    Microcontroller    │
+                    │                       │
+                    │     Internal RTC      │
+                    └───────────┬───────────┘
+                                │
+              ┌─────────────────┼─────────────────┐
+              │                 │                 │
+              ▼                 ▼                 ▼
+      ┌──────────────┐  ┌──────────────┐  ┌──────────────┐
+      │     4×4      │  │  External    │  │    Drink     │
+      │    Keypad    │  │  Interrupt   │  │  Detection   │
+      │              │  │    Button    │  │    Button    │
+      └──────┬───────┘  └──────┬───────┘  └──────┬───────┘
+             │                 │                 │
+             └─────────────────┼─────────────────┘
+                               │
+                               ▼
+                    ┌───────────────────────┐
+                    │   System Processing   │
+                    │                       │
+                    │ Reminder Management   │
+                    │ Water Intake Tracking │
+                    │ Target / Remaining    │
+                    │ Missed Count          │
+                    └───────────┬───────────┘
+                                │
+              ┌─────────────────┼─────────────────┐
+              │                 │                 │
+              ▼                 ▼                 ▼
+      ┌──────────────┐   ┌──────────────┐  ┌──────────────┐
+      │   16×2 LCD   │   │    Buzzer    │  │ Status LEDs  │
+      │              │   │              │  │              │
+      │ Time / Date  │   │  Reminder    │  │ Yellow       │
+      │ Target       │   │ Notification │  │ Green        │
+      │ Taken        │   └──────────────┘  │ Red          │
+      │ Remaining    │                     └──────────────┘
+      │ Missed       │
+      │ Completion % │
+      └──────────────┘
+'''
 
 **🧱 Software Modules**
 
