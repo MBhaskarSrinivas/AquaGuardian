@@ -268,8 +268,8 @@ This project provided practical experience with:
 AquaGuardian was developed as an embedded-systems project to demonstrate the integration of multiple microcontroller peripherals into a practical real-world application.
 
 The project combines time management, user interaction, input detection, notification mechanisms and data tracking into a single ARM7-based embedded system.
----
 
+---
 
 **🧩 Working-flow Diagram**
 
