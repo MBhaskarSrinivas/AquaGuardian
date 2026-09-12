@@ -270,7 +270,7 @@ AquaGuardian was developed as an embedded-systems project to demonstrate the int
 The project combines time management, user interaction, input detection, notification mechanisms and data tracking into a single ARM7-based embedded system.
 
 
-**🧩 Block Diagram**
+**🧩 Working-flow Diagram**
 
 ```
                     ┌───────────────────────┐
