@@ -221,6 +221,7 @@ Detailed demonstration images will be added to the "docs/output/" directory.
 Block Diagram
 
 The system block diagram showing the relationship between the LPC21xx controller, RTC, keypad, LCD, buttons, buzzer and LEDs will be available here:
+![AquaGuardian Block Diagram](Images/Block_diagram.jpg)
 
 ### Circuit Diagram
 The following proteus schematic shows the hardware connections between the LPC21xx microcontroller and the connected peripherals.
